@@ -32,25 +32,48 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        title: Text("Horizontal Scrollable ListView"),
-        centerTitle: true,
-      ),
-      body: Row(
-        children: [
-          buildCard(),
-          SizedBox(width: 12),
-          buildCard(),
-          SizedBox(width: 12),
-          buildCard(),
-          SizedBox(width: 12),
-          buildCard(),
-        ],
-      ));
+        appBar: AppBar(
+          title: Text("Horizontal Scrollable ListView"),
+          centerTitle: true,
+        ),
+        body: Container(
+          height: 200,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                buildCard(),
+                SizedBox(width: 12),
+                buildCard(),
+                SizedBox(width: 12),
+                buildCard(),
+                SizedBox(width: 12),
+                buildCard(),
+              ],
+            ),
+          ),
+        ),
+      );
 
   Widget buildCard() => Container(
         width: 200,
         height: 200,
-        color: Colors.teal,
+        color: Colors.red[200],
+        child: Column(
+          children: [
+            Image.asset("assets/images/comunicado0.png"),
+            const SizedBox(
+              height: 4,
+            ),
+            Text(
+              'Shoe XYZ',
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+            Text(
+              '€90',
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+          ],
+        ),
       );
 }
