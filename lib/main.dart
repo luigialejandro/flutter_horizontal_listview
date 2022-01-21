@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_horizontal_listview/show_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -45,23 +47,23 @@ class _MyHomePageState extends State<MyHomePage> {
   List<CardItem> items = [
     CardItem(
       downloadedImage: "assets/images/comunicado0.png",
-      title: 'Nike Free Run',
-      subtitle: '\$99',
+      title: 'Acontecimientos',
+      subtitle: 'Comunicado SAT',
     ),
     CardItem(
       downloadedImage: "assets/images/comunicado1.png",
-      title: 'Nike Air Jordan',
-      subtitle: '\$75',
+      title: 'Declaración anual',
+      subtitle: 'Personas físicas',
     ),
     CardItem(
       downloadedImage: "assets/images/comunicado2.png",
-      title: 'Nike Free Run',
-      subtitle: '\$99',
+      title: 'Inconsistencias',
+      subtitle: 'Contribuyentes',
     ),
     CardItem(
       downloadedImage: "assets/images/comunicado3.png",
-      title: 'Nike Free Run',
-      subtitle: '\$99',
+      title: 'Informa al SAT',
+      subtitle: 'Situación fiscal',
     ),
   ];
 
@@ -74,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Container(
           height: 256,
           child: ListView.separated(
+            padding: EdgeInsets.all(16),
             scrollDirection: Axis.horizontal,
             itemCount: 4,
             separatorBuilder: (context, _) => SizedBox(width: 12),
@@ -90,9 +93,27 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Expanded(
-              child: Image.asset(
-                item.downloadedImage,
-                fit: BoxFit.cover,
+              child: AspectRatio(
+                aspectRatio: 4 / 3,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30),
+                  child: Material(
+                    child: Ink.image(
+                      image: AssetImage(item.downloadedImage),
+                      fit: BoxFit.cover,
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ShowImage(
+                              item: item,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
             const SizedBox(
