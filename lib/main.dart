@@ -45,32 +45,82 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<CardItem> items = [
-    CardItem(
-      downloadedImage: "assets/images/comunicado0.png",
-      title: 'Acontecimientos',
-      subtitle: 'Comunicado SAT',
+    const CardItem(
+      downloadedImage: "assets/images/Ambrym.png",
+      title: 'Ambrym',
+      subtitle: 'Vanuatu',
     ),
-    CardItem(
-      downloadedImage: "assets/images/comunicado1.png",
-      title: 'Declaración anual',
-      subtitle: 'Personas físicas',
+    const CardItem(
+      downloadedImage: "assets/images/arenal.png",
+      title: 'Arenal volcano',
+      subtitle: 'Costa Rica',
     ),
-    CardItem(
-      downloadedImage: "assets/images/comunicado2.png",
-      title: 'Inconsistencias',
-      subtitle: 'Contribuyentes',
+    const CardItem(
+      downloadedImage: "assets/images/asama.png",
+      title: 'Asama volcano',
+      subtitle: 'Japan',
     ),
-    CardItem(
-      downloadedImage: "assets/images/comunicado3.png",
-      title: 'Informa al SAT',
-      subtitle: 'Situación fiscal',
+    const CardItem(
+      downloadedImage: "assets/images/volcanfuegocolima.png",
+      title: 'Colima Fuego',
+      subtitle: 'Mexico',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/erebus.png",
+      title: 'Erebus',
+      subtitle: 'Antarctica',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Erta_Ale.png",
+      title: 'Erta Ale',
+      subtitle: 'Ethiopia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Hekla.png",
+      title: 'Hekla',
+      subtitle: 'Iceland',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/karymskynew.png",
+      title: 'Karymsky',
+      subtitle: 'Russia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/kilauea.png",
+      title: 'Kilauea',
+      subtitle: 'Hawaiian islands USA',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/merapi.png",
+      title: 'Merapi',
+      subtitle: 'Indonesia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Pacaya.png",
+      title: 'Pacaya',
+      subtitle: 'Guatemala',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/semeru.png",
+      title: 'Semeru',
+      subtitle: 'Indonesia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Stromboli.png",
+      title: 'Stromboli',
+      subtitle: 'Sicily Italy',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/tungurahua.png",
+      title: 'Tungurahua',
+      subtitle: 'Ecuador',
     ),
   ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text("Horizontal Scrollable ListView"),
+          title: Text("Volcanoes Horizontal Scrollable ListView"),
           centerTitle: true,
         ),
         body: Container(
@@ -78,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView.separated(
             padding: EdgeInsets.all(16),
             scrollDirection: Axis.horizontal,
-            itemCount: 4,
+            itemCount: 14,
             separatorBuilder: (context, _) => SizedBox(width: 12),
             itemBuilder: (context, index) => buildCard(item: items[index]),
           ),
