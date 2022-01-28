@@ -28,6 +28,10 @@ class ShowImage extends StatelessWidget {
               item.title,
               style: TextStyle(fontSize: 32),
             ),
+            Text(
+              item.subtitle,
+              style: TextStyle(fontSize: 32),
+            ),
           ],
         ),
       );

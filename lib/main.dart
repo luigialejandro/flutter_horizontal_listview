@@ -61,9 +61,24 @@ class _MyHomePageState extends State<MyHomePage> {
       subtitle: 'Japan',
     ),
     const CardItem(
+      downloadedImage: "assets/images/bezy.png",
+      title: 'Bezymianny',
+      subtitle: 'Kamchatka Russia',
+    ),
+    const CardItem(
       downloadedImage: "assets/images/volcanfuegocolima.png",
       title: 'Colima Fuego',
       subtitle: 'Mexico',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/copague.png",
+      title: 'Copahue',
+      subtitle: 'Argentina',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/dukono.png",
+      title: 'Dukono',
+      subtitle: 'Indonesia',
     ),
     const CardItem(
       downloadedImage: "assets/images/erebus.png",
@@ -74,6 +89,21 @@ class _MyHomePageState extends State<MyHomePage> {
       downloadedImage: "assets/images/Erta_Ale.png",
       title: 'Erta Ale',
       subtitle: 'Ethiopia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/etna.png",
+      title: 'Etna',
+      subtitle: 'Italy',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/eyjafj.png",
+      title: 'Eyjafjallajökull',
+      subtitle: 'Iceland',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/fuegoguatemala.png",
+      title: 'Fuego',
+      subtitle: 'Guatemala',
     ),
     const CardItem(
       downloadedImage: "assets/images/Hekla.png",
@@ -91,9 +121,39 @@ class _MyHomePageState extends State<MyHomePage> {
       subtitle: 'Hawaiian islands USA',
     ),
     const CardItem(
+      downloadedImage: "assets/images/Krakatoa.png",
+      title: 'Krakatau Anak',
+      subtitle: 'Indonesia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/masaya.png",
+      title: 'Masaya volcano',
+      subtitle: 'Honduras',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Mayon.png",
+      title: 'Mayon Mountain',
+      subtitle: 'Philippines',
+    ),
+    const CardItem(
       downloadedImage: "assets/images/merapi.png",
       title: 'Merapi',
       subtitle: 'Indonesia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/nyamuragira.png",
+      title: 'Nyamuragira',
+      subtitle: 'The Congo',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/nyiragongo.png",
+      title: 'Nyiragongo',
+      subtitle: 'The Congo',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/lengai.png",
+      title: 'Ol Doinyo Lengai',
+      subtitle: 'Tanzania',
     ),
     const CardItem(
       downloadedImage: "assets/images/Pacaya.png",
@@ -101,14 +161,44 @@ class _MyHomePageState extends State<MyHomePage> {
       subtitle: 'Guatemala',
     ),
     const CardItem(
+      downloadedImage: "assets/images/poas.png",
+      title: 'Poas volcano',
+      subtitle: 'Costa Rica',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/popocatepetl.png",
+      title: 'Popocatepetl',
+      subtitle: 'Mexico',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/elena.png",
+      title: 'Saint Helens',
+      subtitle: 'USA',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/Sakurajima1.png",
+      title: 'Sakurajima',
+      subtitle: 'Japan',
+    ),
+    const CardItem(
       downloadedImage: "assets/images/semeru.png",
       title: 'Semeru',
+      subtitle: 'Indonesia',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/sinabung.png",
+      title: 'Sinabung',
       subtitle: 'Indonesia',
     ),
     const CardItem(
       downloadedImage: "assets/images/Stromboli.png",
       title: 'Stromboli',
       subtitle: 'Sicily Italy',
+    ),
+    const CardItem(
+      downloadedImage: "assets/images/teide.png",
+      title: 'Teide',
+      subtitle: 'Canary Islands Spain',
     ),
     const CardItem(
       downloadedImage: "assets/images/tungurahua.png",
@@ -124,11 +214,11 @@ class _MyHomePageState extends State<MyHomePage> {
           centerTitle: true,
         ),
         body: Container(
-          height: 256,
+          //height: 256,
           child: ListView.separated(
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(14),
             scrollDirection: Axis.horizontal,
-            itemCount: 14,
+            itemCount: 32,
             separatorBuilder: (context, _) => SizedBox(width: 12),
             itemBuilder: (context, index) => buildCard(item: items[index]),
           ),
